@@ -1,0 +1,545 @@
+/* I have started with the mobile version first*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    background-color: black;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;    
+    color: #FFFFFF;
+    line-height: 24px;   
+    padding: 12px auto;
+    height: 64px;
+}
+
+.ncontent1 {
+    flex: 1 1 25%;   
+    justify-content: center;
+    padding-left: 24px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.ncontent2 {
+    display: none;
+}
+
+.ncontent3 {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex: 1 1 75%; 
+    
+}
+
+.nr-buttons {
+    display: flex;
+    width: 100%;
+    justify-content:flex-end;
+    margin: auto 20px;    
+}
+
+.nr-buttons li {
+    color: #FFFFFF;
+    margin: auto 10px;
+}
+
+ul {
+    list-style: none; 
+    font-size: 14px;
+    font-weight: 500;     
+}
+
+li > a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#borderb {
+    background-color: #FFFFFF;
+    color: black;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 10px 12px;
+}
+
+img {
+    width: 100%;
+    height: auto;    
+}
+
+head {
+    background-color: #FFFFFF;    
+}
+
+.hcontent1 {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center; 
+    width: 80%; 
+    margin-left: 1em;     
+
+}
+
+.hicon1, .hicon2, .hicon3 {
+    display: block;   
+    position: relative;
+    background-color: #FAFAF9;
+    padding: 28px 12px 20px;
+    margin-right: 0;      
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    color: rgb(84, 84, 84);
+    height: 130px;
+    width: 40%;
+    cursor: pointer;
+}
+
+/*in order to make two line the 'drive or deliver' part.*/
+.hicon1 > p {    
+    width: 50%;
+}
+
+.icons {    
+    width: 24px;
+    height: 24px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.hicon1::after, .hicon2::after, .hicon3::after {
+    content: " ";
+    height: 4px;
+    width: 0;
+    background: black;
+    position: absolute;
+    transition: 0.3s;
+    left: 0;
+    bottom: -10px;        
+}
+
+.hicon1:hover::after, .hicon2:hover::after, .hicon3:hover::after {
+    width: 100%;   
+}
+
+.hcontent2 {
+    display: flex;
+    flex-direction: column;     
+    align-items: flex-start;
+    height: 100%;    
+    
+    
+}
+
+.hcontent2 > p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: start;   
+    padding: 12px 24px;         
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    text-align: start;    
+    padding: 24px;         
+}
+
+.hc2-atag1 {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 8px;   
+    margin: 0 24px;
+    padding: 14px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    width:max-content; 
+    display: block; 
+    margin-block-start: 1em;
+    margin-block-end: 1em;   
+}
+
+.hc2-atag2 {    
+    display: block;    
+    margin-block-end: 1em; 
+    margin-left: 24px;   
+    color: black;
+    background-image: linear-gradient( transparent calc(100% - 1px), #000000 1px ), linear-gradient( transparent calc(100% - 1px), #CBCBCB 1px );
+    background-size: 0% 6px, 100% 6px;
+    background-position: 0 bottom, 0 bottom;
+    background-repeat: no-repeat;    
+}
+/*I directly copied the background-image/size/position/repeat part from the original website. 
+But I added the hovering part myself because I couldn't find out the original part:)*/
+/* 
+    normally I tried to code below but it didn't work well.
+.hc2-atag2::after {
+    content: '';
+    height: 2px;
+    width: 70%;
+    margin: 1px 10px;
+    background: black;
+    position: absolute;
+    transition: 0.3s;
+    left: 0;
+    bottom: 350px;    
+} */
+.hc2-atag2:hover {
+    transition: 0.4s;
+    background-size: 100% 6px;    
+}
+ 
+
+
+.atag {     
+    display: block; 
+    margin-block-start: 1em;
+    margin-block-end: 1em;    
+    color: black;
+    background-image: linear-gradient( transparent calc(100% - 1px), #000000 1px ), linear-gradient( transparent calc(100% - 1px), #CBCBCB 1px );
+    background-size: 0% 6px, 100% 6px;
+    background-position: 0 bottom, 0 bottom;
+    background-repeat: no-repeat;
+    
+}
+
+.atag:hover {
+    transition: 0.4s;
+    background-size: 100% 6px;    
+}
+
+
+
+#tdriver {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    margin: 10px 24px;
+    margin-top: 25px;
+    color: rgb(51, 51, 51);
+}
+
+.s2img {
+    margin: 10px auto;    
+}
+
+.s2div1, .s2div2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10px 24px;   
+} 
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    display: block; 
+    margin-block-start: 1em;
+    margin-block-end: 1em; 
+}
+
+.inlineb > p {
+    font-size: 16px;
+    line-height: 24px;
+    display: block; 
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    color: rgb(51, 51, 51); 
+    opacity: 0.8;   
+
+}
+
+
+.lastdiv {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    background-color: #F6F6F6;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.app > img {
+    width: 20%;
+}
+
+.app {
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    text-align: start;
+    background-color: #FFFFFF;
+    color: black;
+    border: 1px solid rgb(204, 204, 204);    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 10px;
+    margin: 0.5rem 1.2rem;
+}
+
+.signup {
+    text-decoration:none solid rgb(84, 84, 84);
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    text-align: start;
+    background-color: #FFFFFF;
+    color: rgb(84, 84, 84);
+    padding:  10px;
+    margin: 0 1.2rem;
+    border-bottom: 1px solid black;
+    border-width: 60%;
+}
+
+span {
+    margin: auto 20px;
+    padding-right: 10px;
+}
+
+/* arrow part was a tough one for me  and I tried one thing but it didn't work properly so I deleted all.*/
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    padding: 40px 24px;
+    margin-top: 40px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+footer > p {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(175, 175, 175);
+    margin: 12px 0;    
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+    .hicon1, .hicon2, .hicon3 {
+        width: 20%;
+
+    }
+    
+    .hicon1 > p:hover, .hicon2:hover > p, .hicon3 > p:hover {
+
+        opacity: 0.8;
+    } 
+
+    .hc2-atag1:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: 0.5s;
+
+    }
+
+    .inlineb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*I couldn't adjust the images in this section at the same size.*/
+
+    .app {
+        justify-content: left;        
+    }
+
+    .lastdiv > p::after {
+        margin-left: 20em;        
+    }
+    /*I tried to do the signup part inline but I couldn't manage*/
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+
+    footer > p {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .ncontent1 {
+        flex: 0 1 auto;
+        padding-right: 20px;
+    }
+
+    .ncontent3 {
+        flex: 0 1 auto;
+        margin-left: 0;
+    }
+
+    .ncontent2 {
+        display: flex;
+        justify-content: space-between;
+        flex: 2 1 auto;
+        font-size: 20px;
+        font-weight: 400;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    
+    ul {
+        display: flex;
+        
+    }
+   
+
+    .ncontent2 > ul > li {
+        margin: auto 20px;        
+    }
+
+    .ncontent2 > ul > li:hover {
+        border: 1px solid white;
+        cursor: pointer;
+        border-style: none;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 12px;
+        padding-right: 12px;
+        transition: .4s;        
+        background-color: rgba(255, 255, 255, 0.2);
+        text-decoration: none;
+    }
+
+    #back-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        padding-left: 5em;
+        background-image: url("uber_img.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        position: relative;        
+        z-index: 0;
+
+    }
+
+    #top-div  {        
+        width: 50%;
+        height: 80vh;
+        position: relative;        
+        z-index: 1;
+        background-color: #FFFFFF;
+    }
+
+    #tdriver {
+        width: 0;
+    }
+  
+    .hcontent1 {
+        width: 90%;
+    }
+
+    .hcontent2 {
+        height: 50vh;
+        justify-content: space-between;
+    }
+
+    h1 {
+        font-size: 52px;
+        line-height: 64px;
+    }
+
+    .inlineb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .s2div1 > img {
+        width: 80%;
+        margin: 1em 0;
+    }
+
+    .s2div1 > img {
+        margin-top: 4em;
+    }
+
+    .lastdiv {
+        display: grid;
+        grid-template-rows: repeat(2 1fr);
+    }
+
+    .lastdiv-top {
+        display: flex;
+    }
+
+    .lastdiv-bottom {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .signup {
+        width: 100%;        
+        padding-top: 2em;        
+        
+    }
+
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+
+    footer > p {
+        text-align: center;
+    }
+
+
+}
