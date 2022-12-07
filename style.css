@@ -81,9 +81,6 @@ img {
     height: auto;    
 }
 
-head {
-    background-color: #FFFFFF;    
-}
 
 .hcontent1 {
     display: flex;
@@ -248,7 +245,7 @@ h2 {
 }
 
 .s2img {
-    margin: 10px auto;    
+    margin: 10px 0;    
 }
 
 .s2div1, .s2div2 {
@@ -375,7 +372,15 @@ footer > p {
         justify-content: center;
         align-items: center;
     }
-    /*I couldn't adjust the images in this section at the same size.*/
+    
+    img {
+        width: 250px;
+        height: 200px;
+    } /* adjust both images same size*/
+
+     .s2div2 {
+        margin-bottom: 70px;
+    } /* adjust the images same height/level */
 
     .app {
         justify-content: left;        
